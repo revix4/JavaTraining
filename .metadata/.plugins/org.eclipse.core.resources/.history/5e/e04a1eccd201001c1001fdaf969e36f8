@@ -1,0 +1,12 @@
+package com.training.banking.Users;
+
+public class User {
+	String username;
+	String password;
+	
+	public User(String name, String pass)
+	{
+		username = name;
+		password = pass;
+	}
+}

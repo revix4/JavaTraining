@@ -1,0 +1,30 @@
+package com.training.banking;
+
+public class BankingApp {
+
+	public static void main(String[] args) {
+		InputScanner input = new InputScanner();
+		
+		String selection = input.getStringInput("Press R to register/nPress L to login");
+		
+		if(selection == "R")
+		{
+			String username = input.getStringInput("Enter your username");
+			
+			String password = input.getStringInput("Enter your password.");
+			
+			System.out.println(username + " " + password);
+		}
+		else if(selection == "L")
+		{
+			String username = input.getStringInput("Enter your username");
+			
+			String password = input.getStringInput("Enter your password.");
+			
+			System.out.println(username + " " + password);
+		}
+		
+		input.close();
+	}
+
+}

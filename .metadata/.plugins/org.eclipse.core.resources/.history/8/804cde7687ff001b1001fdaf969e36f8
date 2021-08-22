@@ -1,0 +1,8 @@
+package com.revature.UST;
+
+public class Animel {
+	public void move()
+	{
+		System.out.println("I like to Move it!");
+	}
+}

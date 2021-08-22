@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.revature.AWS.WebSevices"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Another"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Implementing"/>
+    <fullyQualifiedTypeName name="com.revature.UST.TestInterface"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Animel"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Salary"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Employee"/>
+    <fullyQualifiedTypeName name="com.revature.UST.Exceptions"/>
+    <fullyQualifiedTypeName name="com.revature.UST.WithdrawalException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.training.banking.Input"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.training.banking.Users.UserList"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="com.training.banking.InputScanner"/>
+    <fullyQualifiedTypeName name="com.training.banking.Users.User"/>
+    <fullyQualifiedTypeName name="com.training.banking.Users.Role"/>
+    <fullyQualifiedTypeName name="com.training.banking.Menus.CustomerMenu"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

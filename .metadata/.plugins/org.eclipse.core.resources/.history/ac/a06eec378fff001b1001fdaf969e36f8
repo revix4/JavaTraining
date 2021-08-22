@@ -1,0 +1,23 @@
+package com.revature.UST;
+
+public class Salary extends Employee {
+
+	private double salary;
+	
+	public Salary(double salary, String name, String address, int number) {
+		super(name, address, number);
+		
+		this.salary = salary;
+	}
+
+	public static void main(String[] args) {
+		Employee sal = new Salary(45000.00, "Name", "place", 5);
+		
+		System.out.println(sal.computePay());
+	}
+
+	public double computePay()
+	{
+		return salary / 12;
+	}
+}

@@ -1,0 +1,18 @@
+package com.revature.UST;
+
+public class Implementing implements TestInterface, Another {
+
+	public static void main(String[] args) {
+		Implementing imp = new Implementing();
+		
+		imp.printSomething();
+
+	}
+
+	@Override
+	public void printSomething() {
+		System.out.println("Something");
+		
+	}
+
+}

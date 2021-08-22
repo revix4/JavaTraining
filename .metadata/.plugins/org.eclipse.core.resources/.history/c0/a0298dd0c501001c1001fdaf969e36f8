@@ -1,0 +1,11 @@
+package com.training.banking.Users;
+
+import java.util.HashMap;
+
+public class UserList {
+	HashMap<String, String> users;
+	
+	public UserList() {
+		users = new HashMap<String, String>();
+	}
+}

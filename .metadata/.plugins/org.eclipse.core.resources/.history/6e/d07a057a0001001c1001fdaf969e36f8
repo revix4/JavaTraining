@@ -1,0 +1,22 @@
+package com.training.banking;
+
+import java.util.Scanner;
+
+public class BankingApp {
+
+	public static void main(String[] args) {
+		Input input = new Input();
+		
+		
+		String username = input.getStringInput("Enter your username");
+		
+		System.out.println("Enter your password.");
+		
+		String password = input.getStringInput();
+		
+		System.out.println(username + " " + password);
+		
+		input.close();
+	}
+
+}

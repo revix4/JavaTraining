@@ -1,0 +1,43 @@
+package com.revature.UST;
+/**
+ * 
+ */
+
+/**
+ * @author James
+ *
+ */
+public class HelloWorld {
+
+	final static double pi = 3.14159;
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		double piRSquared = pi*3*3;
+		
+		System.out.println("Pi r squared " + piRSquared);
+		
+		System.out.println("Heelo world");
+		
+		int i = 10;
+		
+		int j = 20;
+		
+		j = 69;
+		
+		int k = i+j;
+		
+		Vehicle v = new Vehicle();
+		
+		System.out.println(v.weight);
+		
+		int result = v.getVehicleInfo(1,2,3);
+		System.out.println(result);
+		
+		String s = new String("training");
+		
+		System.out.println("Amout withdrawn is " + k);
+	}
+
+}

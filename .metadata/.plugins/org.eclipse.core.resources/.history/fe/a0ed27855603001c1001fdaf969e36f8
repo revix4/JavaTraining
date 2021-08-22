@@ -1,0 +1,31 @@
+package com.training.banking.Users;
+
+public class User {
+	
+	String username;
+	String password;
+	Role role;
+	int balance;
+	
+	public User(String name, String pass, Role role)
+	{
+		username = name;
+		password = pass;
+		this.role = role;
+		balance = 0;
+	}
+	
+	public User(String name, String pass, Role role, int balance)
+	{
+		username = name;
+		password = pass;
+		this.role = role;
+		this.balance = balance;
+	}
+	
+	public void deposit(double amount)
+	{
+		balance += amount;
+		System.out.println("Your new balance is " + balance);
+	}
+}

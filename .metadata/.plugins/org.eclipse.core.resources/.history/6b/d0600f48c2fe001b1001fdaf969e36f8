@@ -1,0 +1,31 @@
+package com.revature.UST;
+/**
+ * 
+ */
+
+/**
+ * @author James
+ *
+ */
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("Heelo world");
+		
+		int i = 10;
+		
+		int j = 20;
+		
+		j = 69;
+		
+		int k = i+j;
+		
+		String s = new String("training");
+		
+		System.out.println("Amout withdrawn is" + k);
+	}
+
+}

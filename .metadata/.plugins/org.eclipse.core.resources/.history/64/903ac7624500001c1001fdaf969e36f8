@@ -1,0 +1,27 @@
+package com.revature.UST;
+
+public class Exceptions {
+	
+	public int balance = 500;
+	
+	
+
+	public static void main(String[] args) {
+		Exceptions e = new Exceptions();
+		
+		e.verifyWithdrawal(6000);
+	}
+	
+	public void verifyWithdrawal(int amount) throws WithdrawalException
+	{
+		if(amount > balance)
+		{
+			throw new WithdrawalException("You do not have enough in your account to withdraw.");
+		}
+		else
+		{
+			balance -= amount;
+		}
+	}
+
+}

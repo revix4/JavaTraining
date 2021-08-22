@@ -1,0 +1,8 @@
+package com.training.banking.Menus;
+
+public class CustomerMenu {
+	public final void TransactionMenu(String currentUser)
+	{
+		
+	}
+}

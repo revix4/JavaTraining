@@ -1,0 +1,16 @@
+package com.revature.UST;
+
+public class Dog extends Animel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animel a = new Animel();
+		Dog d = new Dog();
+	}
+	
+	public void move()
+	{
+		System.out.println("Move it!");
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.revature.UST;
+
+public class Vehicle {
+	int weight = 600;
+	int height = 20;
+	int width = 50;
+	
+	String color = "Green";
+	
+	public void getVehicleInfo()
+	{
+		System.out.println("weight " + weight + " height " + height + " width " + width);
+	}
+}

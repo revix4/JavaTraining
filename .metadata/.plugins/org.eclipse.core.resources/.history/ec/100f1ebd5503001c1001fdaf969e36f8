@@ -1,0 +1,20 @@
+package com.training.banking.Menus;
+
+import com.training.banking.InputScanner;
+
+public class CustomerMenu {
+	public final static void TransactionMenu(String currentUser)
+	{
+		InputScanner input = new InputScanner();
+		
+		boolean quit = false;
+		
+		while(!quit)
+		{
+			String selection = input.getStringInput
+					("Press D to deposit funds\n"
+							+ "Press W to withdraw funds\n"
+							+ "Press Q to quit");
+		}
+	}
+}
