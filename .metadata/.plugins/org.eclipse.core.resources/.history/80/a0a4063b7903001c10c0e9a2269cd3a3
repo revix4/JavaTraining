@@ -1,0 +1,33 @@
+package com.training.banking.Menus;
+
+import com.training.banking.InputScanner;
+import com.training.banking.Users.Role;
+import com.training.banking.Users.User;
+import com.training.banking.Users.UserList;
+
+public class AdminMenu {
+	
+	public static void ManageAllMenu(UserList users, User current)
+	{
+		boolean quit = false;
+		
+		System.out.println("Hello " + current.getUsername());
+		
+		while(!quit)
+		{
+			System.out.println("Admin Management Menu.");
+			String selection = InputScanner.getStringInput
+					("Press V to view all user info\n"
+							+ "Press Q to quit");
+			
+			if(selection.equals("V") || selection.equals("v"))
+			{
+				users.viewAccounts();
+			}
+			else if(selection.equals("Q") || selection.equals("q"))
+			{
+				quit = true;
+			}
+		}
+	}
+}

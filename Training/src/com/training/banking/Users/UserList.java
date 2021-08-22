@@ -1,5 +1,11 @@
 package com.training.banking.Users;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 public class UserList {
@@ -8,6 +14,7 @@ public class UserList {
 	
 	public UserList() {
 		users = new HashMap<String, User>();
+		this.load();
 	}
 	
 	public boolean register(String username, String password)
@@ -49,8 +56,110 @@ public class UserList {
 		}
 	}
 	
+	public void save()
+	{
+		try
+		{
+			FileOutputStream fout = new FileOutputStream("Users.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fout);
+			for(User user:users.values())
+			{
+				out.writeObject(user);
+			}
+			out.close();
+		}
+		catch(IOException e)
+		{
+			System.err.println("Unable to save users");
+			e.printStackTrace();
+		}
+	}
+	
+	public void load()
+	{
+		try
+		{
+			FileInputStream fin = new FileInputStream("Users.ser");
+			ObjectInputStream in = new ObjectInputStream(fin);
+			
+			boolean eof = false;
+			while(!eof)
+			{
+				User user = (User)in.readObject();
+				if(user != null)
+				{
+					users.put(user.getUsername(), user);
+				}
+				else
+				{
+					eof = true;
+				}
+			}
+			
+			in.close();
+		}
+		catch(EOFException e)
+		{
+			System.out.println("Reached end of file");
+		}
+		catch(IOException e)
+		{
+			System.out.println("IOexception " + e.getMessage());
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			System.out.println("ClassNotFoundException" + e.getMessage());
+		}
+	}
+	
 	public User getCurrentUser()
 	{
 		return currentUser;
+	}
+	
+	public User getUser(String username)
+	{
+		if(users.containsKey(username))
+		{
+			return users.get(username);
+		}
+		else
+		{
+			return null;
+		}
+	}
+	
+	public void viewAccounts(Role role)
+	{
+		for(User user:users.values())
+		{
+			if(user.getRole().equals(role))
+			{
+				System.out.println("User name: " + user.getUsername()
+									+ " Account balance: " + user.getBalance());
+			}
+		}
+	}
+	
+	public void viewAccounts()
+	{
+		for(User user:users.values())
+		{
+			System.out.println("User name: " + user.getUsername()
+								+ " Account balance: " + user.getBalance()
+								+ " Role: " + user.getRole());
+		}
+	}
+	
+	public void removeUser(String username)
+	{
+		if(users.containsKey(username))
+		{
+			users.remove(username);
+		}
+		else
+		{
+			System.out.println("That user does not exist");
+		}
 	}
 }

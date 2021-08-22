@@ -1,7 +1,13 @@
 package com.training.banking.Users;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2552625019421227336L;
 	private String username;
 	private String password;
 	private Role role;
@@ -31,6 +37,11 @@ public class User {
 	public Role getRole()
 	{
 		return role;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
 	}
 	
 	public boolean checkLogin(String name, String pass)

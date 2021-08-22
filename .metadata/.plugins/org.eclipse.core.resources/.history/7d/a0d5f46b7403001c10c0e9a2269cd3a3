@@ -1,0 +1,11 @@
+package com.training.banking.Menus;
+
+import com.training.banking.Users.UserList;
+
+public class EmployeeMenu {
+	
+	public static void MainMenu(UserList users)
+	{
+		
+	}
+}

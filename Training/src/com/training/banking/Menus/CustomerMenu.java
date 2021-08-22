@@ -4,7 +4,7 @@ import com.training.banking.InputScanner;
 import com.training.banking.Users.User;
 
 public class CustomerMenu {
-	public final static void TransactionMenu(User currentUser)
+	public static void TransactionMenu(User currentUser)
 	{
 		boolean quit = false;
 		
@@ -18,17 +18,17 @@ public class CustomerMenu {
 							+ "Press W to withdraw funds\n"
 							+ "Press Q to quit");
 			
-			if(selection.equals("D"))
+			if(selection.equals("D") || selection.equals("d"))
 			{
 				double input = InputScanner.getDoubleInput("How much do you want to deposit?");
 				currentUser.deposit(input);
 			}
-			else if(selection.equals("W"))
+			else if(selection.equals("W") || selection.equals("w"))
 			{
 				double input = InputScanner.getDoubleInput("How much do you want to withdraw?");
 				currentUser.withdraw(input);
 			}
-			else if(selection.equals("Q"))
+			else if(selection.equals("Q") || selection.equals("q"))
 			{
 				quit = true;
 			}
