@@ -136,8 +136,7 @@ public class UserList {
 			if(user.getRole().equals(role))
 			{
 				System.out.println("User name: " + user.getUsername()
-									+ " Account balance: " + user.getBalance()
-									+ " Approved: "+ user.isApproved());
+									+ " Account balance: " + user.getBalance());
 			}
 		}
 	}
@@ -148,8 +147,7 @@ public class UserList {
 		{
 			System.out.println("User name: " + user.getUsername()
 								+ " Account balance: " + user.getBalance()
-								+ " Role: " + user.getRole()
-								+ " Approved: "+ user.isApproved());
+								+ " Role: " + user.getRole());
 		}
 	}
 	
@@ -158,18 +156,6 @@ public class UserList {
 		if(users.containsKey(username))
 		{
 			users.remove(username);
-		}
-		else
-		{
-			System.out.println("That user does not exist");
-		}
-	}
-	
-	public void approveUser(String username)
-	{
-		if(users.containsKey(username))
-		{
-			users.get(username).approve();;
 		}
 		else
 		{

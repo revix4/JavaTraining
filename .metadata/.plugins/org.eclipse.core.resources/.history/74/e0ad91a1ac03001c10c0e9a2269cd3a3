@@ -18,7 +18,7 @@ public class EmployeeMenu {
 			System.out.println("Customer Management Menu.");
 			String selection = InputScanner.getStringInput
 					("Press V to view customers info\n"
-							+ "Press A to approve a customer\n"
+							+ "Press A to approve a customer"
 							+ "Press Q to quit");
 			
 			if(selection.equals("V") || selection.equals("v"))

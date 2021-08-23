@@ -18,18 +18,11 @@ public class EmployeeMenu {
 			System.out.println("Customer Management Menu.");
 			String selection = InputScanner.getStringInput
 					("Press V to view customers info\n"
-							+ "Press A to approve a customer\n"
 							+ "Press Q to quit");
 			
 			if(selection.equals("V") || selection.equals("v"))
 			{
 				users.viewAccounts(Role.Customer);
-			}
-			else if(selection.equals("A") || selection.equals("a"))
-			{
-				users.viewAccounts(Role.Customer);
-				String username = InputScanner.getStringInput("Enter the username you would like to approve.");
-				users.approveUser(username);
 			}
 			else if(selection.equals("Q") || selection.equals("q"))
 			{

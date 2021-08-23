@@ -12,7 +12,6 @@ public class User implements Serializable {
 	private String password;
 	private Role role;
 	private int balance;
-	private boolean approved;
 	
 	public User(String name, String pass, Role role)
 	{
@@ -20,7 +19,6 @@ public class User implements Serializable {
 		password = pass;
 		this.role = role;
 		balance = 0;
-		approved = false;
 	}
 	
 	public User(String name, String pass, Role role, int balance)
@@ -29,7 +27,6 @@ public class User implements Serializable {
 		password = pass;
 		this.role = role;
 		this.balance = balance;
-		approved = false;
 	}
 	
 	public String getUsername()
@@ -45,16 +42,6 @@ public class User implements Serializable {
 	public double getBalance()
 	{
 		return balance;
-	}
-	
-	public boolean isApproved()
-	{
-		return approved;
-	}
-	
-	public void approve()
-	{
-		approved = true;
 	}
 	
 	public boolean checkLogin(String name, String pass)

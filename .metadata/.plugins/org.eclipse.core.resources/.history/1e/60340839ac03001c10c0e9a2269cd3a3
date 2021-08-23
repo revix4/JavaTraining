@@ -1,7 +1,6 @@
 package com.training.banking.Menus;
 
 import com.training.banking.InputScanner;
-import com.training.banking.Users.Role;
 import com.training.banking.Users.User;
 import com.training.banking.Users.UserList;
 
@@ -20,7 +19,6 @@ public class AdminMenu {
 					("Press V to view all user info\n"
 							+ "Press W to withdraw from an account\n"
 							+ "Press D to deposit from an account\n"
-							+ "Press A to approve a customer\n"
 							+ "Press R to close an user account\n"
 							+ "Press Q to quit");
 			
@@ -35,12 +33,6 @@ public class AdminMenu {
 			else if(selection.equals("D") || selection.equals("d"))
 			{
 				DepositMenu(users);
-			}
-			else if(selection.equals("A") || selection.equals("a"))
-			{
-				users.viewAccounts(Role.Customer);
-				String username = InputScanner.getStringInput("Enter the username you would like to approve.");
-				users.approveUser(username);
 			}
 			else if(selection.equals("R") || selection.equals("r"))
 			{

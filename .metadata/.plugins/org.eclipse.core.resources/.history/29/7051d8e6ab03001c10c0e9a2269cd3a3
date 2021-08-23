@@ -164,16 +164,4 @@ public class UserList {
 			System.out.println("That user does not exist");
 		}
 	}
-	
-	public void approveUser(String username)
-	{
-		if(users.containsKey(username))
-		{
-			users.get(username).approve();;
-		}
-		else
-		{
-			System.out.println("That user does not exist");
-		}
-	}
 }

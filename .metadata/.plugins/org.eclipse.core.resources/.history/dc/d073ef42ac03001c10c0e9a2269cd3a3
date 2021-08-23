@@ -20,7 +20,6 @@ public class AdminMenu {
 					("Press V to view all user info\n"
 							+ "Press W to withdraw from an account\n"
 							+ "Press D to deposit from an account\n"
-							+ "Press A to approve a customer\n"
 							+ "Press R to close an user account\n"
 							+ "Press Q to quit");
 			
